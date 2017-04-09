@@ -156,6 +156,9 @@ extension ViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: false)
+        
         if let rowData = dataModel?[indexPath.row] {
             
             let viewController:DetailViewController = UIStoryboard(name: "DetailVC", bundle: nil).instantiateViewController(withIdentifier: "DetailVC") as! DetailViewController
