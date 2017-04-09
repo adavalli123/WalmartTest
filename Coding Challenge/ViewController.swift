@@ -159,15 +159,10 @@ extension ViewController: UITableViewDelegate {
         if let rowData = dataModel?[indexPath.row] {
             
             let viewController:DetailViewController = UIStoryboard(name: "DetailVC", bundle: nil).instantiateViewController(withIdentifier: "DetailVC") as! DetailViewController
-            // .instantiatViewControllerWithIdentifier() returns AnyObject! this must be downcast to utilize it
             
             viewController.dataSource = rowData
             self.navigationController?.pushViewController(viewController, animated: false)
         }
-
-//        let navController = UINavigationController(rootViewController: viewController)
-        
-//        self.present(navController, animated: false, completion: nil)
     }
 }
 
