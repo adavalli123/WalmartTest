@@ -1,19 +1,64 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TableViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="114" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="Coding_Challenge" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="114"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="113.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_Img" translatesAutoresizingMaskIntoConstraints="NO" id="Mla-GZ-Cd3">
+                        <rect key="frame" x="15" y="48.5" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="8tk-18-xt4"/>
+                            <constraint firstAttribute="height" constant="50" id="Wbi-29-uDn"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dp6-ah-o7C">
+                        <rect key="frame" x="15" y="10" width="290" height="28.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmI-A6-Q2d">
+                        <rect key="frame" x="75" y="48.5" width="230" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Dp6-ah-o7C" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="2fA-2R-2dL"/>
+                    <constraint firstItem="Dp6-ah-o7C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="AfM-bM-LQa"/>
+                    <constraint firstAttribute="trailing" secondItem="Dp6-ah-o7C" secondAttribute="trailing" constant="15" id="Pz9-IE-TiZ"/>
+                    <constraint firstItem="lmI-A6-Q2d" firstAttribute="top" secondItem="Mla-GZ-Cd3" secondAttribute="top" id="W8D-rg-y2c"/>
+                    <constraint firstItem="Mla-GZ-Cd3" firstAttribute="top" secondItem="Dp6-ah-o7C" secondAttribute="bottom" constant="10" id="WXt-46-oSf"/>
+                    <constraint firstItem="lmI-A6-Q2d" firstAttribute="leading" secondItem="Mla-GZ-Cd3" secondAttribute="trailing" constant="10" id="gWu-HI-EkU"/>
+                    <constraint firstAttribute="bottom" secondItem="Mla-GZ-Cd3" secondAttribute="bottom" constant="15" id="tGA-yJ-zYq"/>
+                    <constraint firstItem="Mla-GZ-Cd3" firstAttribute="leading" secondItem="Dp6-ah-o7C" secondAttribute="leading" id="xhS-Jo-HYL"/>
+                    <constraint firstItem="lmI-A6-Q2d" firstAttribute="trailing" secondItem="Dp6-ah-o7C" secondAttribute="trailing" id="zuB-7c-XIi"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="overViewLabel" destination="lmI-A6-Q2d" id="bN8-P3-Isa"/>
+                <outlet property="posterImageView" destination="Mla-GZ-Cd3" id="lH3-CY-jva"/>
+                <outlet property="titleLabel" destination="Dp6-ah-o7C" id="jAS-DA-AqZ"/>
+            </connections>
+            <point key="canvasLocation" x="50" y="56"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="no_Img" width="300" height="300"/>
+    </resources>
 </document>
